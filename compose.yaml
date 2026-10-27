@@ -1,0 +1,55 @@
+# ==============================================================================
+# Techtonic Bank — PHP2Shell CTF Challenge
+# Docker Compose Deployment Configuration
+# ==============================================================================
+
+services:
+  ctc-bank:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ctc-bank-lab
+    restart: unless-stopped
+    
+    # Bind to localhost by default to prevent unintended exposure to external networks
+    ports:
+      - "127.0.0.1:8080:8080"
+    
+    # Security Hardening & Confinement
+    # Drop all Linux capabilities, grant only NET_RAW for the diagnostic ping probe
+    cap_drop:
+      - ALL
+    cap_add:
+      - NET_RAW
+
+    # Read-only root filesystem prevents persistent malware or container tampering
+    read_only: true
+
+    # Explicit temporary writable storage for sessions and temporary execution files
+    tmpfs:
+      - /tmp:rw,nosuid,size=32m
+      - /var/tmp:rw,nosuid,size=16m
+
+    # Resource constraints to prevent denial-of-service against the host
+    deploy:
+      resources:
+        limits:
+          cpus: "0.50"
+          memory: 256M
+          pids: 100
+
+    # Privilege escalation prevention:
+    # On native apt/deb Docker installations, enable no-new-privileges below.
+    # Note: If running Docker via Canonical Snap (/var/snap/docker), Snap's host
+    # AppArmor confinement blocks PR_SET_NO_NEW_PRIVS transitions.
+    # security_opt:
+    #   - "no-new-privileges:true"
+
+    networks:
+      - ctc-lab-network
+
+networks:
+  ctc-lab-network:
+    driver: bridge
+    labels:
+      com.ctcbank.lab.description: "Isolated training lab network"

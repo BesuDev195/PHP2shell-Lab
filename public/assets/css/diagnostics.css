@@ -1,0 +1,156 @@
+/* ==========================================================================
+   TECHTONIC BANK — INFRASTRUCTURE DIAGNOSTICS CONSOLE STYLES
+   Realistic Enterprise Network Reachability Interface
+   ========================================================================== */
+
+/* Diagnostic Form Card */
+.diag-form-card {
+  border-top: 4px solid var(--brand-lime);
+}
+
+/* Preset Target Buttons */
+.target-presets {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.preset-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-preset {
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-color);
+  color: var(--navy-800);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-preset:hover {
+  background: var(--gold-100);
+  border-color: var(--brand-lime);
+  color: var(--brand-green);
+}
+
+/* Realistic Enterprise Probe Output Viewer */
+.probe-output-card {
+  background: #0f172a;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  border: 1px solid #1e293b;
+  margin-top: 24px;
+}
+
+.probe-output-header {
+  background: #1e293b;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #334155;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.probe-output-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  letter-spacing: 0.02em;
+}
+
+.probe-output-title svg {
+  color: var(--brand-lime);
+}
+
+.probe-output-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.probe-status-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.probe-status-pill.success {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.probe-status-pill.warn {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.probe-latency-pill {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.terminal-btn-copy {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.15s ease;
+}
+
+.terminal-btn-copy:hover {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.probe-output-body {
+  padding: 18px 20px;
+  min-height: 180px;
+  max-height: 480px;
+  overflow-y: auto;
+  background: #090e17;
+}
+
+.probe-output-text {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: #e2e8f0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+}
+
+.probe-output-empty {
+  color: #64748b;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  text-align: center;
+}

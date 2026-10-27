@@ -1,0 +1,12 @@
+.git
+.gitignore
+.dockerignore
+.agents
+.gemini
+*.md
+!README.md
+*.log
+tmp/
+scratch/
+.env
+.DS_Store

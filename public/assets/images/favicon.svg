@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="64" height="64" fill="none">
+  <!-- Dark Charcoal Background from logo -->
+  <rect width="100" height="100" rx="20" fill="#242424" />
+
+  <!-- Top Canopy Bar (Darker Forest Green) -->
+  <path d="M 22 42 V 30 H 78 V 42" stroke="#228B22" stroke-width="7.5" stroke-linecap="square" stroke-linejoin="miter" />
+
+  <!-- Radiating Connecting Branches (Vibrant Lime Green) -->
+  <line x1="50" y1="46" x2="27" y2="59" stroke="#96D83B" stroke-width="6.5" stroke-linecap="round" />
+  <line x1="50" y1="46" x2="50" y2="76" stroke="#96D83B" stroke-width="6.5" stroke-linecap="round" />
+  <line x1="50" y1="46" x2="73" y2="59" stroke="#96D83B" stroke-width="6.5" stroke-linecap="round" />
+
+  <!-- Network Nodes / Circular Vertices -->
+  <circle cx="50" cy="46" r="8" fill="#96D83B" />
+  <circle cx="27" cy="59" r="8.5" fill="#96D83B" />
+  <circle cx="50" cy="76" r="8.5" fill="#96D83B" />
+  <circle cx="73" cy="59" r="8.5" fill="#96D83B" />
+</svg>
